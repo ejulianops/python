@@ -100,8 +100,6 @@ block. The following row should be moved:
             f'{f(corr)}\nbut now it returns these games:\n{f(val)}\nwhen the method was called with ' + 
             f'this list:\n{test_cases_str}')
     
-
-
         
 
     

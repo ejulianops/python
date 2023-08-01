@@ -27,7 +27,6 @@ class GameMuseum(GameWarehouse):
                 games_year_before_1990.append(game)
         return games_year_before_1990
 
-
 if __name__ == "__main__":
     museum = GameMuseum()
     museum.add_game(ComputerGame("Pacman", "Namco", 1980))
