@@ -11,6 +11,15 @@ class CourseAttempt:
 def names_of_students(attempts: list):
     return map(lambda student : student.student_name, attempts)
 
+def course_names(attempts: list):
+    courses = map(lambda course : course.course_name, attempts)
+    unique_courses = []
+    for course in courses:
+        if course not in unique_courses:
+            unique_courses.append(course)
+    unique_courses.sort()
+    return unique_courses
+
 if __name__ == '__main__':
     attempt = CourseAttempt("Peter Python", "Introduction to Programming", 5)
     print(attempt.student_name)
@@ -22,6 +31,12 @@ if __name__ == '__main__':
     s1 = CourseAttempt("Peter Python", "Introduction to Programming", 3)
     s2 = CourseAttempt("Olivia C. Objective", "Introduction to Programming", 5)
     s3 = CourseAttempt("Peter Python", "Advanced Course in Programming", 2)
-
     for name in names_of_students([s1, s2, s3]):
+        print(name)
+
+    print('--- Part 2 ---')
+    s1 = CourseAttempt("Peter Python", "Introduction to Programming", 3)
+    s2 = CourseAttempt("Olivia C. Objective", "Introduction to Programming", 5)
+    s3 = CourseAttempt("Peter Python", "Advanced Course in Programming", 2)
+    for name in course_names([s1, s2, s3]):
         print(name)
